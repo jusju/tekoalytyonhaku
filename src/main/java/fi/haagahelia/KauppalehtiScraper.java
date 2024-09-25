@@ -27,7 +27,7 @@ public class KauppalehtiScraper {
 
     public static void main(String[] args) {
         // Set path to your GeckoDriver
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\jusju\\git\\tekoalytyopaikka\\tekoalytyopaikkahaku\\geckodriver.exe"); // Use geckodriver instead of chromedriver
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\jusju\\git\\tekoalytyonhaku\\geckodriver.exe"); // Use geckodriver instead of chromedriver
 
         // Instantiate WebDriver for Firefox
         WebDriver driver = new FirefoxDriver(); // Changed to FirefoxDriver
@@ -44,7 +44,8 @@ public class KauppalehtiScraper {
 
                 // Wait for the page to load fully (you can add explicit waits here if needed)
                 Thread.sleep(3000); // Simple sleep for demonstration, use WebDriverWait for better control
-
+                driver.findElement(By.cssSelector("#almacmp-modalConfirmBtn")).click();
+ 
 
                 
                 // Find all company name elements and their corresponding links
